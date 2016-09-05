@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MwStudyDemo.iml" filepath="$PROJECT_DIR$/MwStudyDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/PushSDK/PushSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/useumengdemo/app.iml" filepath="$PROJECT_DIR$/useumengdemo/app.iml" />
     </modules>
   </component>

@@ -2,13 +2,30 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.humanheima.mwstudydemo">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57cce22b67e58ef0be000fc8"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="human" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="f880700df70b885a07e719a83645073d" >
+        </meta-data>
+
+        <activity android:name=".ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
