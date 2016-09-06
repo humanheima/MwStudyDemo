@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android5XDemo</string>
+    <string name="title_activity_basicctivity">Basicctivity</string>
 </resources>
