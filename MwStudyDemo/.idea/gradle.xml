@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/PushSDK" />
+            <option value="$PROJECT_DIR$/android5xdemo" />
             <option value="$PROJECT_DIR$/runtimepermissiondemo" />
             <option value="$PROJECT_DIR$/useumengdemo" />
           </set>
@@ -18,6 +19,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/PushSDK" />
+            <option value="$PROJECT_DIR$/android5xdemo" />
             <option value="$PROJECT_DIR$/runtimepermissiondemo" />
             <option value="$PROJECT_DIR$/useumengdemo" />
           </set>
