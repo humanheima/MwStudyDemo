@@ -1,9 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:showIn="@layout/activity_basicctivity">
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/shape"
+        android:text="改变视图高度" />
+
+    <!--用来测试tint着色-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imgTint1"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:tint="@color/colorAccent"
+            android:tintMode="src_over" />
+
+        <ImageView
+            android:id="@+id/imgTint2"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:tint="@color/colorAccent"
+            android:tintMode="add" />
+
+        <ImageView
+            android:id="@+id/imgTint3"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:tint="@color/colorAccent"
+            android:tintMode="multiply" />
+
+        <ImageView
+            android:id="@+id/imgTint4"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:tint="@color/colorAccent"
+            android:tintMode="src_atop" />
+
+        <ImageView
+            android:id="@+id/imgTint5"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:tint="@color/colorAccent"
+            android:tintMode="src_in" />
+
+        <ImageView
+            android:id="@+id/imgTint6"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            android:tint="@color/colorAccent"
+            android:tintMode="screen" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textClipping1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:clickable="true"
+            android:elevation="1dp"
+            android:gravity="center"
+            android:text="测试剪裁" />
+
+        <TextView
+            android:id="@+id/textClipping2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:elevation="1dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="测试剪裁" />
+    </LinearLayout>
+
+
+</LinearLayout>
