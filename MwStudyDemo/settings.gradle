@@ -1,1 +1,1 @@
-include ':useumengdemo', ':PushSDK'
+include ':useumengdemo', ':PushSDK', ':runtimepermissiondemo'
