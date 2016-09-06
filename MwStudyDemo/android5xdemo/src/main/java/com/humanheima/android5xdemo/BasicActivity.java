@@ -10,7 +10,7 @@ import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-public class Basicctivity extends AppCompatActivity {
+public class BasicActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     FloatingActionButton fab;

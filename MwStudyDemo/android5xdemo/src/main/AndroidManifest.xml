@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Basicctivity"
+            android:name=".BasicActivity"
             android:label="@string/title_activity_basicctivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
