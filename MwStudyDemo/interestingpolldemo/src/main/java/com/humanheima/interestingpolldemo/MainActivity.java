@@ -102,22 +102,19 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onPageScrollStateChanged(int state) {
                 switch (state) {
-                    case 0:
+                    case ViewPager.SCROLL_STATE_IDLE:
                         Log.e("case", "case 0 SCROLL_STATE_IDLE");
-                        break;
-                    case 1:
-                        isAuto = false;
-                        handler.removeMessages(1);
-                        isFromUser = true;
-                        Log.e("tag", "case 1" + currPos);
-                        break;
-                    case 2:
-                        Log.e("tag", "case 2");
                         isAuto = true;
                         if (isFromUser) {
                             isFromUser = false;
                             handler.sendEmptyMessageDelayed(1, DELAY);
                         }
+                        break;
+                    case ViewPager.SCROLL_STATE_DRAGGING:
+                        Log.e("case", "CASE 1 SCROLL_STATE_DRAGGING");
+                        isAuto = false;
+                        handler.removeMessages(1);
+                        isFromUser = true;
                         break;
                     default:
                         break;
@@ -127,7 +124,14 @@ public class MainActivity extends AppCompatActivity {
 
         imageViewList.get(0).setBackgroundResource(R.drawable.dot);
         //执行定时任务
-        handler.sendEmptyMessageDelayed(1, DELAY);
+         handler.sendEmptyMessageDelayed(1, DELAY);
     }
 
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeMessages(1);
+        handler=null;
+    }
 }
