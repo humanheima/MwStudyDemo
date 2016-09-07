@@ -1,9 +1,16 @@
 <resources>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--对应ActionBar的颜色-->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--对应状态栏的颜色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--对应EditText编辑时，RadioButton，checkBox选中时的颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--对应ActionBar上文字的颜色-->
+        <item name="android:navigationBarColor">#ff3344</item>
     </style>
 
 </resources>

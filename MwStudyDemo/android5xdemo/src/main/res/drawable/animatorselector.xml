@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/state_on"
+        android:drawable="@drawable/bgpressed"
+        android:state_checked="true" />
+    <item
+        android:id="@+id/state_off"
+        android:drawable="@drawable/bgnormal"
+        android:state_checked="false" />
+    <transition
+        android:fromId="@+id/state_off"
+        android:toId="@+id/state_on">
+        <animation-list>
+            <item
+                android:drawable="@drawable/middle1"
+                android:duration="@android:integer/config_shortAnimTime" />
+            <item
+                android:drawable="@drawable/mid2"
+                android:duration="@android:integer/config_shortAnimTime" />
+
+        </animation-list>
+    </transition>
+    <transition
+        android:fromId="@+id/state_on"
+        android:toId="@+id/state_off">
+        <animation-list>
+            <item
+                android:drawable="@drawable/mid2"
+                android:duration="@android:integer/config_shortAnimTime" />
+
+            <item
+                android:drawable="@drawable/middle1"
+                android:duration="@android:integer/config_shortAnimTime" />
+
+        </animation-list>
+    </transition>
+
+
+</animated-selector>

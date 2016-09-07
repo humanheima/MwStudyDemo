@@ -27,6 +27,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/llCenter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/ll"
@@ -46,4 +47,25 @@
             android:background="@drawable/oval" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_below="@+id/llCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnStateListAnimator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用StateListAnimator做背景" />
+        <Switch
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="使用animatorselector"
+            android:textOff="animatorselector"
+            android:background="@drawable/animatorselector"/>
+
+
+    </LinearLayout>
 </RelativeLayout>

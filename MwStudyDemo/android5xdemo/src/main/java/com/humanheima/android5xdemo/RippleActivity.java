@@ -1,6 +1,8 @@
 package com.humanheima.android5xdemo;
 
 import android.animation.Animator;
+import android.animation.AnimatorInflater;
+import android.animation.StateListAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -13,7 +15,10 @@ import android.widget.LinearLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-//展示波纹动画效果
+
+/**
+ * 展示波纹动画效果和StateListAnimator的使用
+ */
 public class RippleActivity extends AppCompatActivity {
 
     @BindView(R.id.imgOval)
@@ -26,6 +31,8 @@ public class RippleActivity extends AppCompatActivity {
     Button btn2;
     @BindView(R.id.ll)
     LinearLayout ll;
+    @BindView(R.id.btnStateListAnimator)
+    Button btnStateListAnimator;
 
     @Override
 
@@ -44,18 +51,27 @@ public class RippleActivity extends AppCompatActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.imgOval:
-                Animator animator=ViewAnimationUtils.createCircularReveal(imgOval,imgOval.getWidth()/2,imgOval.getWidth()/2,imgOval.getWidth(),0);
+                Animator animator = ViewAnimationUtils.createCircularReveal(imgOval, imgOval.getWidth() / 2, imgOval.getWidth() / 2, imgOval.getWidth(), 0);
                 animator.setInterpolator(new AccelerateDecelerateInterpolator());
                 animator.setDuration(2000);
                 animator.start();
 
                 break;
             case R.id.imgRect:
-                Animator animatorRect=ViewAnimationUtils.createCircularReveal(imgRect,0,0,0, (float) Math.hypot(imgRect.getWidth(),imgRect.getHeight()));
+                Animator animatorRect = ViewAnimationUtils.createCircularReveal(imgRect, 0, 0, 0, (float) Math.hypot(imgRect.getWidth(), imgRect.getHeight()));
                 animatorRect.setInterpolator(new AccelerateDecelerateInterpolator());
                 animatorRect.setDuration(2000);
                 animatorRect.start();
                 break;
         }
+    }
+
+    @OnClick(R.id.btnStateListAnimator)
+    public void addStateListAnimator() {
+        // 也可以在xml中设置 android:stateListAnimator="@animator/statelistanimator"
+        StateListAnimator animator = AnimatorInflater.loadStateListAnimator(this, R.animator.statelistanimator);
+        btnStateListAnimator.setStateListAnimator(animator);
+
+
     }
 }
