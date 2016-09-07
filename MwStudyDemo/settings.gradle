@@ -1,1 +1,1 @@
-include ':useumengdemo', ':PushSDK', ':runtimepermissiondemo', ':android5xdemo'
+include ':useumengdemo', ':PushSDK', ':runtimepermissiondemo', ':android5xdemo', ':interestingpolldemo'

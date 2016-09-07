@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/MwStudyDemo.iml" filepath="$PROJECT_DIR$/MwStudyDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/PushSDK/PushSDK.iml" />
       <module fileurl="file://$PROJECT_DIR$/android5xdemo/android5xdemo.iml" filepath="$PROJECT_DIR$/android5xdemo/android5xdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interestingpolldemo/interestingpolldemo.iml" filepath="$PROJECT_DIR$/interestingpolldemo/interestingpolldemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/runtimepermissiondemo/runtimepermissiondemo.iml" filepath="$PROJECT_DIR$/runtimepermissiondemo/runtimepermissiondemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/useumengdemo/useumengdemo.iml" filepath="$PROJECT_DIR$/useumengdemo/useumengdemo.iml" />
     </modules>

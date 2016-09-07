@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.humanheima.android5xdemo">
+    package="com.humanheima.interestingpolldemo">
 
     <application
         android:allowBackup="true"
@@ -8,14 +8,9 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".BasicActivity"
-            android:label="@string/title_activity_basicctivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".UseRecyclerActivity" />
-        <activity android:name=".ShareAnimatorActA"></activity>
-        <activity android:name=".ShareAnimatorActB" />
-        <activity android:name=".RippleActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
