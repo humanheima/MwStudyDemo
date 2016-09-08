@@ -187,6 +187,8 @@ public class MainActivity extends AppCompatActivity {
             adapter.setOnItemClickListener(new OnItemClickListener() {
                 @Override
                 public void onItemClick(View view, int position) {
+
+                    layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 0);
                     if (selectedPosition == position) {
                         resetRlMove();
                     } else {
@@ -217,9 +219,11 @@ public class MainActivity extends AppCompatActivity {
         Log.e("changeLocation", "margintop=" + marginTop);
 
         if (marginTop <= -adapter.getItemHeight()) {
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 0);
             //Log.e("changeLocation", "第1种情况");
             startAnimation();
         } else if (marginTop > -adapter.getItemHeight() && marginTop < smallMarginTop) {
+            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 0);
 
             if (marginTop > screenHeight - normalHeight) {
                 // 不应该是动画，应该是动态改变宽和高以及距顶部的距离
@@ -271,9 +275,10 @@ public class MainActivity extends AppCompatActivity {
                 final int changeInnerHeight = currentInnerHeight - smallHeight;//剩余变化的高度
                 Log.e("changeLocation", "第3种情况，currentWidth" + currentWidth + ",currentHeight=" + currentHeight + ",currentMargin" + currentMargin + ",innerWidth=" + currentInnerWidth
                         + ",innerHeight=" + currentInnerHeight + ",innerLeftMargin" + currentInnerLeftMargin);
+                //为了解决底部缝隙问题，必须动态调整layoutParams是否靠底部
+                layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
                 //动画的时间
                 final float RATIO = 1.0f * (currentWidth / (normalWidth * 0.75F));
-
                 ValueAnimator valueAnimator = ValueAnimator.ofFloat(0, 1);
                 valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                     @Override
@@ -283,10 +288,12 @@ public class MainActivity extends AppCompatActivity {
                         layoutParams.height = (int) (currentHeight - changeHeight * fraction);
                         layoutParams.topMargin = (int) (currentMargin + (changeMargin * fraction));
                         rlMove.setLayoutParams(layoutParams);
-
                         innerLayoutParams.width = (int) (currentInnerWidth - changeInnerWidth * fraction);
                         innerLayoutParams.height = (int) (currentInnerHeight - changeInnerHeight * fraction);
                         imageView.setLayoutParams(innerLayoutParams);
+                       /* if (fraction >= 1) {
+                            layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 0);
+                        }*/
                     }
                 });
                 if (RATIO > 0) {
@@ -336,7 +343,6 @@ public class MainActivity extends AppCompatActivity {
         layoutParams.height = normalHeight;
         layoutParams.width = normalWidth;
         rlMove.setLayoutParams(layoutParams);
-
         innerLayoutParams.setMargins(0, 0, 0, 0);
         innerLayoutParams.height = normalHeight;
         innerLayoutParams.width = normalWidth;
