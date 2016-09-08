@@ -3,6 +3,7 @@ package com.humanheima.android5xdemo;
 import android.animation.Animator;
 import android.animation.AnimatorInflater;
 import android.animation.StateListAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -33,6 +34,8 @@ public class RippleActivity extends AppCompatActivity {
     LinearLayout ll;
     @BindView(R.id.btnStateListAnimator)
     Button btnStateListAnimator;
+    @BindView(R.id.btnStartNotificationActivity)
+    Button btnStartNotificationActivity;
 
     @Override
 
@@ -47,7 +50,7 @@ public class RippleActivity extends AppCompatActivity {
         return animator;
     }
 
-    @OnClick({R.id.imgOval, R.id.imgRect})
+    @OnClick({R.id.imgOval, R.id.imgRect, R.id.btnStartNotificationActivity})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.imgOval:
@@ -62,6 +65,9 @@ public class RippleActivity extends AppCompatActivity {
                 animatorRect.setInterpolator(new AccelerateDecelerateInterpolator());
                 animatorRect.setDuration(2000);
                 animatorRect.start();
+                break;
+            case R.id.btnStartNotificationActivity:
+                startActivity(new Intent(this, NotificationActivity.class));
                 break;
         }
     }

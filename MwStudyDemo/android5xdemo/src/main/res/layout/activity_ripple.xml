@@ -48,6 +48,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/llBottom"
         android:layout_below="@+id/llCenter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,4 +69,11 @@
 
 
     </LinearLayout>
+
+    <Button
+        android:layout_below="@+id/llBottom"
+        android:id="@+id/btnStartNotificationActivity"
+        android:layout_width="match_parent"
+        android:text="打开通知Activity"
+        android:layout_height="wrap_content" />
 </RelativeLayout>

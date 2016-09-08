@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AnimatorDemoGitHub" />
             <option value="$PROJECT_DIR$/PushSDK" />
             <option value="$PROJECT_DIR$/android5xdemo" />
             <option value="$PROJECT_DIR$/interestingpolldemo" />
@@ -19,6 +20,7 @@
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AnimatorDemoGitHub" />
             <option value="$PROJECT_DIR$/PushSDK" />
             <option value="$PROJECT_DIR$/android5xdemo" />
             <option value="$PROJECT_DIR$/interestingpolldemo" />
